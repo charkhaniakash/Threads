@@ -63,6 +63,8 @@
   }
 
   .bottombar {
+    /* By default, Tailwind uses a mobile-first breakpoint system */
+    /* md:hidden is a utility class used to hide an element on medium screens and larger */
     @apply fixed bottom-0 z-10 w-full rounded-t-3xl bg-glassmorphism p-4 backdrop-blur-lg xs:px-7 md:hidden;
   }
 
@@ -158,4 +160,10 @@
 
 .comment-form_btn {
   @apply rounded-3xl bg-primary-500 px-8 py-2 !text-small-regular text-light-1 max-xs:w-full !important;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
 }
